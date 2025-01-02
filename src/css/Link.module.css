@@ -1,0 +1,44 @@
+/* リンクリストの基本スタイル */
+.linklist {
+  list-style: none; /* デフォルトのリストのマーカーを消す */
+  padding: 0;
+  margin: 0;
+  display: flex; /* 横並びに表示 */
+  flex-wrap: wrap; /* モバイルなどで折り返し */
+  justify-content: center; /* リスト項目を中央に配置 */
+  gap: 20px; /* 各リンクの間隔 */
+}
+
+/* 各リスト項目のスタイル */
+.linklist li {
+  margin: 10px 0; /* 上下に余白を追加 */
+}
+
+/* リンクのスタイル */
+.linklist a {
+  text-decoration: none; /* 下線を消す */
+  color: #333; /* リンクの色 */
+  font-size: 16px; /* フォントサイズ */
+  font-weight: 500; /* 少し太めに */
+  transition: color 0.3s, transform 0.3s; /* 色とアニメーション */
+}
+
+/* リンクにホバー時の効果 */
+.linklist a:hover {
+  color: #2196F3; /* ホバー時に青色 */
+  transform: translateY(-2px); /* 上に少し浮かせる */
+}
+
+/* リンクにフォーカス時のスタイル */
+.linklist a:focus {
+  outline: none; /* フォーカスの枠線を消す */
+  color: #2196F3; /* 青色 */
+}
+
+/* スマートフォンや小さい画面向けのレスポンシブ対応 */
+@media (max-width: 768px) {
+  .linklist {
+    flex-direction: column; /* 縦並びに変更 */
+    align-items: center; /* 中央に配置 */
+  }
+}

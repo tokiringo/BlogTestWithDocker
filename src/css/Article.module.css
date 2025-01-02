@@ -1,0 +1,104 @@
+/* App.module.css */
+.Title{
+  margin-left: 5%;
+  margin-bottom: 0px;
+}
+
+/* 記事リストのスタイル */
+.ArticleList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 最大4列 */
+  gap: 20px;
+  padding: 70px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .ArticleList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .ArticleList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 画面幅が480px未満の場合: 最大1列 */
+@media (max-width: 600px) {
+  .ArticleList {
+    grid-template-columns: 1fr;
+  }
+  .Article{
+    min-width: 200px;
+  }
+}
+
+.ArticleTitle{
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+  padding: 0em;
+}
+
+.Article {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 
+              0 1px 4px rgba(0, 0, 0, 0.1); /* 影を濃くしてぼかしを追加 */
+  padding: 20px;
+  height: 400px;
+  width: 100%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box; /* パディングを含めて幅を計算 */
+  text-decoration: none; /* リンクの下線を消す */
+  color: #333; /* リンクの色を一定にする */
+  transition: transform 0.2s, box-shadow 0.2s; /* ホバー時のアニメーション */
+}
+
+/* ホバー時にさらに影を強調して浮いた効果 */
+.Article:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 
+              0 4px 8px rgba(0, 0, 0, 0.1); /* さらに濃く、ぼかしを広げる */
+  transform: translateY(-1px); /* 上に少し持ち上げる */
+}
+
+.ArticleDescription {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 最大3行まで表示 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 省略記号を表示 */
+  white-space: normal; /* 改行を許可 */
+  font-size: 0.8em;
+  margin: 0em;
+}
+
+.Hashtag {
+  font-size: 0.8em;
+  color: #007bff;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.Hashtag:hover {
+  text-decoration: underline;
+}
+
+.ArticleDate{
+  font-size: 0.5em
+}
+
+.ArticleImage{
+  width: 100%; /* カードの幅に画像を合わせる */
+  height: 50%; /* カードの高さに画像を合わせる */
+  object-fit: cover; /* カードを埋めるようにトリミング */
+}
+
+.ArticleWriter{
+  font-size: 0.5em;
+}

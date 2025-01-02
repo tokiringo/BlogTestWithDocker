@@ -1,0 +1,75 @@
+/* Detail.module.css */
+
+/* 詳細画面全体のスタイル */
+.Detail {
+    max-width: 800px;
+    margin: 150px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 日付 */
+  .DetailDate {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  /* 記事画像 */
+    .DetailImage {
+    max-width: 400px;  /* 最大幅を指定して画像を縮小 */
+    width: 100%;  /* 親要素の幅に合わせる */
+    height: auto;  /* 高さは自動調整 */
+    border-radius: 8px;
+    margin-top: 20px;
+    display: block;  /* ブロック要素として表示 */
+    margin-left: auto;  /* 左に自動マージン */
+    margin-right: auto;  /* 右に自動マージン */
+  }
+  
+  
+  
+  /* 記事タイトル */
+  .DetailTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    line-height: 1.4;
+  }
+  
+  /* ハッシュタグ */
+  .DetailHashtags {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .Hashtag {
+    background-color: #2196f3;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 5px;
+  }
+  
+  /* 記事説明 */
+  .DetailDescription {
+    font-size: 16px;
+    color: #555;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  
+  /* 作成者 */
+  .DetailWriter {
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  

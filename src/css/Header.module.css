@@ -1,0 +1,6 @@
+.Header {
+    display: flex; /* Flexboxを適用 */
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    height: 100vh; /* 高さを指定して中央に揃える */
+}
