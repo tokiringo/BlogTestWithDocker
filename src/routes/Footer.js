@@ -8,7 +8,7 @@ export const Footer = () => {
     
         <ul className={styles.linklist}>
             <li>
-                <Link to="/">記事</Link> 
+                <Link to="/">ホーム</Link> 
             </li>
             <li>
                 <Link to="https://www.receno.com/pen/sense/">センスのいらないインテリア</Link>

@@ -25,8 +25,9 @@ export const HamburgerMenu = () => {
         <ul>
           <li><a href="/">ホーム</a></li>
           <li><a href="/post">投稿</a></li>
+          <li><a href="../localhost//8080">カレンダー</a></li>
           <li><a href="#services">ログアウト</a></li>
-          <li><a href="#contact">管理者専用</a></li>
+          
         </ul>
       </nav>
     </div>

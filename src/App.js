@@ -10,6 +10,7 @@ import { Article } from "./routes/Article";
 import { Post } from "./routes/Post";
 import { HamburgerMenu } from "./routes/HamburgerMenu";
 import { Detail } from "./routes/Detail";
+import { Hashtag } from "./routes/Hashtag";
 
 function App () {
   const location = useLocation();
@@ -24,6 +25,7 @@ function App () {
         <Route path="/contact" element={ <Contact /> } /> 
         <Route path="/post" element={ <Post /> } /> 
         <Route path=":id/detail" element={ <Detail /> } /> 
+        <Route path="keyword/:hashtag" element={ <Hashtag /> } />
         <Route path="*" element={ <NotFound /> } /> 
       </Routes>
       <Footer />

@@ -3,7 +3,7 @@ import React from 'react';
 export const NotFound = () =>{
     return (
         <div>
-          <p>Notfound</p>
+          <p>ページが見つかりません。</p>
         </div>
     )
 }
