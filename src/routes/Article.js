@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
-import styles from "../css/Article.module.css";
+import articleStyles from "../css/Article.module.css";
+import commonStyles from "../css/common/common.module.css"
+import classNames from 'classnames';
 
 export const Article = () => {
   const [articles, setArticles] = useState([]);
@@ -30,11 +32,11 @@ export const Article = () => {
   }
 
   return (
-    <div className={styles.Page}>
-      <h1 className={styles.Title}>記事一覧</h1>
-        <div className={styles.SortButtons}>
+    <div className={articleStyles.Page}>
+      <h1 className={commonStyles.common_max_width}>記事一覧</h1>
+        <div className={classNames(articleStyles.SortButtons, commonStyles['common_max_width'])}>
           <button
-              className={sortField === 'date' && sortOrder === 'desc' ? styles.ActiveButton : styles.Button}
+              className={sortField === 'date' && sortOrder === 'desc' ? articleStyles.ActiveButton : articleStyles.Button}
               onClick={() => {
                   setSortField('date');
                   setSortOrder('desc');
@@ -43,7 +45,7 @@ export const Article = () => {
               新しい順
           </button>
           <button
-              className={sortField === 'date' && sortOrder === 'asc' ? styles.ActiveButton : styles.Button}
+              className={sortField === 'date' && sortOrder === 'asc' ? articleStyles.ActiveButton : articleStyles.Button}
               onClick={() => {
                   setSortField('date');
                   setSortOrder('asc');
@@ -52,7 +54,7 @@ export const Article = () => {
               古い順
           </button>
           <button
-              className={sortField === 'visit_count' && sortOrder === 'desc' ? styles.ActiveButton : styles.Button}
+              className={sortField === 'visit_count' && sortOrder === 'desc' ? articleStyles.ActiveButton : articleStyles.Button}
               onClick={() => {
                   setSortField('visit_count');
                   setSortOrder('desc');
@@ -61,37 +63,37 @@ export const Article = () => {
               人気順
           </button>
         </div>
-      <main className={styles.ArticleList}>
+      <main className={articleStyles.ArticleList}>
         {articles.length > 0 ? (
           articles.map((article) => (
             <div 
               key={article._id} 
-              className={styles.Article} 
+              className={articleStyles.Article} 
               onClick={() => window.location.href = `${article._id}/detail`}
             >
-              <p className={styles.ArticleDate}>{article.date}</p>
+              <p className={articleStyles.ArticleDate}>{article.date}</p>
               {article.image_url && (
                 <img 
                   src={`http://localhost:3002/${article.image_url}`} 
                   alt={article.title} 
-                  className={styles.ArticleImage} 
+                  className={articleStyles.ArticleImage} 
                 />
               )}
-              <p className={styles.ArticleTitle}>{article.title}</p>
-              <div className={styles.ArticleHashtags}>
+              <p className={articleStyles.ArticleTitle}>{article.title}</p>
+              <p className={articleStyles.ArticleDescription}>{article.description}</p>
+              <div className={articleStyles.ArticleHashtags}>
                 {article.hashtags.map((hashtag, index) => (
                   <Link
                     key={index}
                     to={`/keyword/hashtag?q=${encodeURIComponent(`${hashtag}`)}`}
-                    className={styles.Hashtag}
+                    className={articleStyles.Hashtag}
                     onClick={(e) => e.stopPropagation()} // 親のクリックイベントを防止
                   >
                     #{hashtag}
                   </Link>
                 ))}
               </div>
-              <p className={styles.ArticleDescription}>{article.description}</p>
-              <p className={styles.ArticleWriter}>作成者: {article.writer}</p>
+              <p className={articleStyles.ArticleWriter}>作成者: {article.writer}</p>
             </div>
           ))
         ) : (

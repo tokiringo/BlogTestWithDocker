@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from 'axios';
 import styles from "../css/Detail.module.css";
 
+
 export function Detail() {
   const { id } = useParams(); // URLから:idを取得
   const [detail, setDetail] = useState(null); // 初期値はnullに変更（データが取得されるまでは空）

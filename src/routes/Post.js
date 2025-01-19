@@ -122,6 +122,7 @@ export const Post = () => {
             className={styles.input}
             type="text"
             name="hashtag"
+            placeholder='#日常'
             value={formData.hashtag}
             onChange={handleInputChange}
           />
@@ -149,7 +150,7 @@ export const Post = () => {
         <div className={styles.field}>
           <label className={styles.label}>画像</label>
           <input
-            className={styles.input}
+            className={styles.image}
             type="file"
             name="image"
             onChange={handleFileChange}

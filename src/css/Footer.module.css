@@ -42,3 +42,7 @@
     align-items: center; /* 中央に配置 */
   }
 }
+
+.Author{
+  text-align: center;
+}

@@ -20,8 +20,8 @@
   /* 記事画像 */
     .DetailImage {
     max-width: 400px;  /* 最大幅を指定して画像を縮小 */
-    width: 100%;  /* 親要素の幅に合わせる */
-    height: auto;  /* 高さは自動調整 */
+    width: auto;  /* 自動調整 */
+    max-height: 500px;  
     border-radius: 8px;
     margin-top: 20px;
     display: block;  /* ブロック要素として表示 */

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from '../css/Article.module.css';
+import commonStyles from "../css/common/common.module.css"
+import classNames from 'classnames';
 
 export const Hashtag = () => {
   const [searchParams] = useSearchParams();
@@ -32,7 +34,7 @@ export const Hashtag = () => {
 
   return (
     <div className={styles.HashtagPage}>
-      <h1 className={styles.Title}>#{queryParam}</h1>
+      <h1 className={classNames(styles.Title, commonStyles['common_max_width'])}>#{queryParam}</h1>
       <main className={styles.ArticleList}>
         {hashtagData.length > 0 ? (
           hashtagData.map((article) => (

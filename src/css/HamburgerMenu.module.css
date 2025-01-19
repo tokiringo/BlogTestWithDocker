@@ -1,8 +1,10 @@
 /* General styles */
 .hamburgerMenu {
-  position: fixed;
-  top: 40px;
-  right: 50px;
+  position: sticky; 
+  display: flex;
+  justify-content: flex-end;
+  top: 40px; /* 上から40pxの位置 */
+  right: 20px; /* 右端から20pxの位置 */
 }
 
 /* Hamburger icon */
@@ -36,20 +38,18 @@
   transform: rotate(-45deg) translate(6px, -6px); /* 左右のバランスを調整 */
 }
 
-
-
-
 /* Menu styles */
 .menu {
-  position: fixed;
-  top: 100px;
-  right: 50px;
+  position: absolute; /* 固定位置を解除 */
+  top: 50px;
+  right: 0; /* メニューを右端に合わせる */
   background: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  width: 150px;
+  width: 150px; /* 固定幅に指定 */
   display: none;
   flex-direction: column;
   padding: 5px 0;
+  border-radius: 10%;
 }
 
 .show {
